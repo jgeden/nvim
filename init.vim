@@ -4,6 +4,8 @@ let g:python3_host_prog="/home/josh/miniconda3/bin/python3"
 let g:autoformat_verbosemode=1
 
 "" Autoformat on save
+let g:prettier#exec_cmd_path = "**/node_modules/prettier/cli.js"
+au BufWrite * :Prettier
 "" au BufWrite * :Autoformat
 
 "" Autocompletion
@@ -14,7 +16,6 @@ set omnifunc=syntaxcomplete#Complete
 "" nnoremap <silent> <C-p> :FZF<cr>
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 "" nnoremap <silent> <leader>F :FZF ~<cr>
-
 
 "" Show line numbers
 "" set number
@@ -85,6 +86,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "" Linting and autoformat
 Plug 'dense-analysis/ale'
 Plug 'vim-autoformat/vim-autoformat'
+Plug 'prettier/vim-prettier'
 
 "" Fuzzy search plugin
 "" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
