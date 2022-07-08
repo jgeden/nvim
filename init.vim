@@ -18,8 +18,7 @@ nnoremap <C-p> <cmd>Telescope find_files<cr>
 "" nnoremap <silent> <leader>F :FZF ~<cr>
 
 "" Show line numbers
-"" set number
-set relativenumber
+set number relativenumber
 
 "" Allow mouse to move cursor
 set mouse=a
